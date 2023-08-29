@@ -29,10 +29,15 @@ namespace CheckBoxFilterApp
 
         private void SetCheckBox()
         {
+            for (int i = 0; i < fastObjectListView1.Items.Count; i++)
+            {
+                //fastObjectListView1.CheckHeaderCheckBox();
+                fastObjectListView1.ToggleSelectedRowCheckBoxes();
+            }
+                
             //fastObjectListView1.UncheckAll();
             //fastObjectListView1.ToggleHeaderCheckBox();
-            CheckBox checkbox = new CheckBox();
-            checkbox.Checked = false;
+
         }
 
         private bool AddItems()
