@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.objectListView1 = new BrightIdeasSoftware.ObjectListView();
-            this.fastObjectListView1 = new BrightIdeasSoftware.FastObjectListView();
-            this.labelOLV = new System.Windows.Forms.Label();
-            this.labelFastOLV = new System.Windows.Forms.Label();
-            this.columnButtonRenderer1 = new BrightIdeasSoftware.ColumnButtonRenderer();
-            this.buttonSubmit = new System.Windows.Forms.Button();
             this.olvColumnApp = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvColumnDescp = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvColumnFunc = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvColumnDate = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.fastObjectListView1 = new BrightIdeasSoftware.FastObjectListView();
             this.olvColumnCheck = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvFColumnApp = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.labelOLV = new System.Windows.Forms.Label();
+            this.labelFastOLV = new System.Windows.Forms.Label();
+            this.columnButtonRenderer1 = new BrightIdeasSoftware.ColumnButtonRenderer();
+            this.buttonSubmit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fastObjectListView1)).BeginInit();
             this.SuspendLayout();
@@ -65,6 +65,28 @@
             this.objectListView1.UseCompatibleStateImageBehavior = false;
             this.objectListView1.View = System.Windows.Forms.View.Details;
             // 
+            // olvColumnApp
+            // 
+            this.olvColumnApp.AspectName = "Application";
+            this.olvColumnApp.Text = "Application";
+            this.olvColumnApp.Width = 80;
+            // 
+            // olvColumnDescp
+            // 
+            this.olvColumnDescp.AspectName = "Description";
+            this.olvColumnDescp.Text = "Description";
+            this.olvColumnDescp.Width = 80;
+            // 
+            // olvColumnFunc
+            // 
+            this.olvColumnFunc.AspectName = "Function";
+            this.olvColumnFunc.Text = "Function";
+            // 
+            // olvColumnDate
+            // 
+            this.olvColumnDate.AspectName = "CreateTime";
+            this.olvColumnDate.Text = "DateTime";
+            // 
             // fastObjectListView1
             // 
             this.fastObjectListView1.AllColumns.Add(this.olvColumnCheck);
@@ -73,6 +95,7 @@
             this.fastObjectListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.olvColumnCheck,
             this.olvFColumnApp});
+            this.fastObjectListView1.Cursor = System.Windows.Forms.Cursors.Default;
             this.fastObjectListView1.HideSelection = false;
             this.fastObjectListView1.Location = new System.Drawing.Point(336, 103);
             this.fastObjectListView1.Name = "fastObjectListView1";
@@ -82,6 +105,18 @@
             this.fastObjectListView1.UseCompatibleStateImageBehavior = false;
             this.fastObjectListView1.View = System.Windows.Forms.View.Details;
             this.fastObjectListView1.VirtualMode = true;
+            // 
+            // olvColumnCheck
+            // 
+            this.olvColumnCheck.AspectName = "CheckBox";
+            this.olvColumnCheck.CheckBoxes = true;
+            this.olvColumnCheck.Text = "CheckBox";
+            this.olvColumnCheck.TriStateCheckBoxes = true;
+            // 
+            // olvFColumnApp
+            // 
+            this.olvFColumnApp.AspectName = "Application";
+            this.olvFColumnApp.Text = "App";
             // 
             // labelOLV
             // 
@@ -113,39 +148,6 @@
             this.buttonSubmit.TabIndex = 4;
             this.buttonSubmit.Text = "Submit";
             this.buttonSubmit.UseVisualStyleBackColor = true;
-            // 
-            // olvColumnApp
-            // 
-            this.olvColumnApp.AspectName = "Application";
-            this.olvColumnApp.Text = "Application";
-            this.olvColumnApp.Width = 80;
-            // 
-            // olvColumnDescp
-            // 
-            this.olvColumnDescp.AspectName = "Description";
-            this.olvColumnDescp.Text = "Description";
-            this.olvColumnDescp.Width = 80;
-            // 
-            // olvColumnFunc
-            // 
-            this.olvColumnFunc.AspectName = "Function";
-            this.olvColumnFunc.Text = "Function";
-            // 
-            // olvColumnDate
-            // 
-            this.olvColumnDate.AspectName = "CreateTime";
-            this.olvColumnDate.Text = "DateTime";
-            // 
-            // olvColumnCheck
-            // 
-            this.olvColumnCheck.CheckBoxes = true;
-            this.olvColumnCheck.Text = "CheckBox";
-            this.olvColumnCheck.TriStateCheckBoxes = true;
-            // 
-            // olvFColumnApp
-            // 
-            this.olvFColumnApp.AspectName = "Application";
-            this.olvFColumnApp.Text = "App";
             // 
             // MainForm
             // 

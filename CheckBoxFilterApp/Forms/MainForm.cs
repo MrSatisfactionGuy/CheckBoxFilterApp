@@ -1,7 +1,7 @@
-﻿using CheckBoxFilterApp.Classes;
+﻿using BrightIdeasSoftware;
+using CheckBoxFilterApp.Classes;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace CheckBoxFilterApp
@@ -11,15 +11,28 @@ namespace CheckBoxFilterApp
         public MainForm()
         {
             InitializeComponent();
-            AddItems();
             SetCheckBox();
+            AddItems();
+        }
 
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FastObjectListView checkBoxFOLV = new FastObjectListView();
+            for (int i = 0; i < fastObjectListView1.Items.Count; i++)
+            {
+                checkBoxFOLV.UncheckAll();// = fastObjectListView1.Items[i].Checked = false;
+                //if (fastObjectListView1.Items[i].Checked == false) ;
+                //fastObjectListView1.CheckIndeterminateObject(fastObjectListView1.Items[i]);
+            }
         }
 
         private void SetCheckBox()
         {
             //fastObjectListView1.UncheckAll();
             //fastObjectListView1.ToggleHeaderCheckBox();
+            CheckBox checkbox = new CheckBox();
+            checkbox.Checked = false;
         }
 
         private bool AddItems()
@@ -46,13 +59,6 @@ namespace CheckBoxFilterApp
             {
                 fastObjectListView1.UncheckAll();
             }
-
-            return true;
-        }
-
-        private bool CheckCheckBox()
-        {
-            //if (fastObjectListView1.IsChecked()) return false;
 
             return true;
         }
