@@ -34,7 +34,7 @@ namespace CheckBoxFilterApp
                 //fastObjectListView1.CheckHeaderCheckBox();
                 fastObjectListView1.ToggleSelectedRowCheckBoxes();
             }
-                
+
             //fastObjectListView1.UncheckAll();
             //fastObjectListView1.ToggleHeaderCheckBox();
 
@@ -66,6 +66,20 @@ namespace CheckBoxFilterApp
             }
 
             return true;
+        }
+
+        private void fastObjectListView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //= false;
+        }
+
+        private void fastObjectListView1_ColumnClick(object sender, ColumnClickEventArgs e)
+        {
+            if (e is TelemetryDataDTO)
+            {
+                this.fastObjectListView1.SelectObject(e, false);
+            }
+            
         }
     }
 }

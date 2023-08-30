@@ -33,5 +33,7 @@ namespace CheckBoxFilterApp.Classes
         public string Description { get; set; }
         public DateTime CreateTime { get; set; }
 
+        public bool Ahhhhhhh { get; set; }
+
     }
 }

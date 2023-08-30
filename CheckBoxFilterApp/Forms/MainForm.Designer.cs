@@ -105,6 +105,8 @@
             this.fastObjectListView1.UseCompatibleStateImageBehavior = false;
             this.fastObjectListView1.View = System.Windows.Forms.View.Details;
             this.fastObjectListView1.VirtualMode = true;
+            this.fastObjectListView1.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.fastObjectListView1_ColumnClick);
+            this.fastObjectListView1.SelectedIndexChanged += new System.EventHandler(this.fastObjectListView1_SelectedIndexChanged);
             // 
             // olvColumnCheck
             // 
