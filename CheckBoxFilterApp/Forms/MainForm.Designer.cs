@@ -110,7 +110,7 @@
             // 
             // olvColumnCheck
             // 
-            this.olvColumnCheck.AspectName = "CheckBox";
+            this.olvColumnCheck.AspectName = "Ahhhhhhh";
             this.olvColumnCheck.CheckBoxes = true;
             this.olvColumnCheck.Text = "CheckBox";
             this.olvColumnCheck.TriStateCheckBoxes = true;
@@ -163,6 +163,8 @@
             this.Controls.Add(this.objectListView1);
             this.Name = "MainForm";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
+            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fastObjectListView1)).EndInit();
             this.ResumeLayout(false);
