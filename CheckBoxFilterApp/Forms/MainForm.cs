@@ -115,17 +115,23 @@ namespace CheckBoxFilterApp
 
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
-            List<TelemetryDataDTO> refreshList = this.telemetryEntries.Select(x => x.Application.Where(/*x.Ahhhhhhh == true*/));
+            //List<TelemetryDataDTO> refreshList = this.telemetryEntries.Select(x => x.Application.Where(/*x.Ahhhhhhh == true*/));
 
-            this.ReloadOLV(refreshList);
+            //this.ReloadOLV(refreshList);
         }
 
-        private bool ReloadOLV(List<TelemetryDataDTO> listToRefresh)
-        {
-            this.fastObjectListView1.Clear();
-            this.fastObjectListView1.AddObjects(listToRefresh);
+        //private bool ReloadOLV(List<TelemetryDataDTO> listToRefresh)
+        //{
+        //    this.fastObjectListView1.Clear();
+        //    this.fastObjectListView1.AddObjects(listToRefresh);
 
-            return true;
+        //    return true;
+        //}
+
+        private void fastObjectListView1_ColumnClick(object sender, EventArgs e)
+        {
+            if (this.fastObjectListView1.SelectedObjects is TelemetryDataDTO dto) dto.Ahhhhhhh = !dto.Ahhhhhhh;
+
         }
     }
 }
