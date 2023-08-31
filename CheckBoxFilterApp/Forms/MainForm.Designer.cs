@@ -96,6 +96,7 @@
             this.olvColumnCheck,
             this.olvFColumnApp});
             this.fastObjectListView1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.fastObjectListView1.FullRowSelect = true;
             this.fastObjectListView1.HideSelection = false;
             this.fastObjectListView1.Location = new System.Drawing.Point(336, 103);
             this.fastObjectListView1.Name = "fastObjectListView1";
@@ -149,6 +150,7 @@
             this.buttonSubmit.TabIndex = 4;
             this.buttonSubmit.Text = "Submit";
             this.buttonSubmit.UseVisualStyleBackColor = true;
+            this.buttonSubmit.Click += new System.EventHandler(this.buttonSubmit_Click);
             // 
             // MainForm
             // 

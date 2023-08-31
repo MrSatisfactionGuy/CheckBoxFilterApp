@@ -4,6 +4,7 @@ using CheckBoxFilterApp.Controller;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace CheckBoxFilterApp
@@ -95,7 +96,7 @@ namespace CheckBoxFilterApp
 
         private void fastObjectListView1_ColumnClick(object sender, ColumnClickEventArgs e)
         {
-            if (this.objectListView1.SelectedObject is TelemetryDataDTO dto) dto.Ahhhhhhh = !dto.Ahhhhhhh;
+            if (this.fastObjectListView1.SelectedObjects is TelemetryDataDTO dto) dto.Ahhhhhhh = !dto.Ahhhhhhh;
             //{
             //this.fastObjectListView1(e, false);
             //}
@@ -110,6 +111,21 @@ namespace CheckBoxFilterApp
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.serialziationController.SerializeLocal(this.telemetryEntries, this.safePath);
+        }
+
+        private void buttonSubmit_Click(object sender, EventArgs e)
+        {
+            List<TelemetryDataDTO> refreshList = this.telemetryEntries.Select(x => x.Application.Where(/*x.Ahhhhhhh == true*/));
+
+            this.ReloadOLV(refreshList);
+        }
+
+        private bool ReloadOLV(List<TelemetryDataDTO> listToRefresh)
+        {
+            this.fastObjectListView1.Clear();
+            this.fastObjectListView1.AddObjects(listToRefresh);
+
+            return true;
         }
     }
 }
