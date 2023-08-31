@@ -88,10 +88,10 @@ namespace CheckBoxFilterApp
             return true;
         }
 
-        private void fastObjectListView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //= false;
-        }
+        //private void fastObjectListView1_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    //= false;
+        //}
 
         private void fastObjectListView1_ColumnClick(object sender, ColumnClickEventArgs e)
         {
