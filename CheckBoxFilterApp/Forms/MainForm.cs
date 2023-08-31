@@ -95,7 +95,7 @@ namespace CheckBoxFilterApp
 
         private void fastObjectListView1_ColumnClick(object sender, ColumnClickEventArgs e)
         {
-            //if (this.objectListView1.SelectedColumn is TelemetryDataDTO dto) dto.Ahhhhhhh = !dto.Ahhhhhhh;
+            if (this.objectListView1.SelectedObject is TelemetryDataDTO dto) dto.Ahhhhhhh = !dto.Ahhhhhhh;
             //{
             //this.fastObjectListView1(e, false);
             //}
